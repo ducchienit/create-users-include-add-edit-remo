@@ -1,0 +1,10 @@
+.tooltip-inner {
+    background-color: red; 
+    color: #fff;
+}
+.arrow::before {
+  border-bottom-color: red !important;
+}
+.error{
+    border-color: red;
+}
