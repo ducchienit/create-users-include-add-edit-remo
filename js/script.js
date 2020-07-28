@@ -15,6 +15,12 @@ $(document).ready(function(){
         month++;
         let year = d.getFullYear();
         let mydate = new Date(year+18, month-1, day);
+        let dayy = new Date().getDate();
+        let monthh = new Date().getMonth();
+        let yearr = new Date().getFullYear();
+        let dateover = new Date(yearr-101, monthh, dayy);
+        console.log(new Date(year, month-1, day));
+        console.log(dateover);
         if(day<10){
             day = "0" + day;
         }
@@ -39,6 +45,10 @@ $(document).ready(function(){
         }
         else if (new Date() < mydate){
             $('#dateBirth').addClass('is-invalid').click(removeError).next().text('Sorry, You must be at least 18 years of age');
+            return;
+        }
+        else if(new Date(year, month-1, day) <= dateover){
+            $('#dateBirth').addClass('is-invalid').click(removeError).next().text('la` ma a` ma` hon 100 tuoi');
             return;
         }
         if(gender === ""){
